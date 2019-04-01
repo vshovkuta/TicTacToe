@@ -1,0 +1,75 @@
+@font-face {
+	font-family: "u1f400";
+	src: url("https://unicode-table.com/fonts/u/u1f400.woff") format("woff"), 
+			 url("u1f400.woff") format("woff");
+}
+
+#Game {
+	padding: 0px;
+	margin: 0px 0px 15px 0px;
+	height: 240px;
+	width: 240px;
+	border: 5px solid #cccccc;
+	position: relative;
+}
+
+#Info {
+	width: 250px;
+	color: gray;
+	display: flex;
+	justify-content: space-around;
+	user-select: none;
+}
+
+#Reset {
+	cursor: pointer;
+}
+
+#Setting {
+	position: absolute;
+	background: #ddddddcc;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 20pt;
+	line-height: 1.75;
+}
+
+.fakelink {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.cell_game {
+	width: 70px;
+	height: 70px;
+	background-color: #dddddd;
+	font-family: u1f400;
+	font-size: 74px;
+	line-height: 74px;
+	border: 5px solid #cccccc;
+	color: grey;
+	text-align: center;
+	user-select: none;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	transition: 1.5s;
+	cursor: pointer;
+}
+
+@keyframes win {
+	0%, 100% { text-shadow: none; }
+	50% { text-shadow: 0px 0px 5px green; }
+}
+
+@keyframes lose {
+	0%, 100% { text-shadow: none; }
+	50% { text-shadow: 0px 0px 5px gray; }
+}
+
