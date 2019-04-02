@@ -83,6 +83,13 @@ function clickCell() {
 	
 		COUNT++;
 		
+		this.dataset.empty = 'false';
+		document.getElementById('Count').innerText = 'COUNT: ' + COUNT;
+		
+		//Проверка на выигрыш
+		if (!checkWin(valueX)) {
+			checkWin(valueO);
+		}
 	} 
 	
 	//Второй игрок - ПК
@@ -109,19 +116,14 @@ function clickCell() {
 			clearInterval(Timer);
 		}
 		
+		document.getElementById('Count').innerText = 'COUNT: ' + COUNT;
+		
 		//Проверка на выигрыш
 		if (!checkWin(valueX)) {
 			checkWin(valueO);
 		}
 	}
 	
-	this.dataset.empty = 'false';
-	document.getElementById('Count').innerText = 'COUNT: ' + COUNT;
-	
-	//Проверка на выигрыш
-	if (!checkWin(valueX)) {
-		checkWin(valueO);
-	}
 }
 
 
