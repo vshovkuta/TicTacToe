@@ -96,17 +96,16 @@ function clickCell() {
 		
 		//ход ПК
 		//Вынести отдельно
-
-		//Получаем массив пустых ячеек
-		let emptyArr = getEmptyCells();
-		//Получаем случайное значение из массива
-		let randomIndex = emptyArr.splice(Math.floor(0 + (Math.random() * emptyArr.length)), 1);
+		if (COUNT < 8) {
+			//Получаем массив пустых ячеек
+			let emptyArr = getEmptyCells();
+			//Получаем случайное значение из массива
+			let randomIndex = emptyArr.splice(Math.floor(0 + (Math.random() * emptyArr.length)), 1);
 		
-		cell[randomIndex].innerText = valueO;
-		cell[randomIndex].dataset.empty = 'false';
-		COUNT++;
-		
-		if (COUNT > 8) {
+			cell[randomIndex].innerText = valueO;
+			cell[randomIndex].dataset.empty = 'false';
+			COUNT++;
+		} else {
 			clearInterval(Timer);
 		}
 		
