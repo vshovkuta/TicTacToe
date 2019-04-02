@@ -64,7 +64,7 @@ function getEmptyCells() {
 	return emptyArr;
 }
 
-//valueO🞪'
+//Установка заничения ячейки
 function clickCell() {
 	
 	if (COUNT > 8 || this.dataset.empty == 'false') {
